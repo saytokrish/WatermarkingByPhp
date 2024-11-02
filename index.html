@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Watermarking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Optional CSS for additional styling -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Image Watermarking Tool</h1>
+        <h5 class="text-center">by Dr. K K Bohra (Lachoo College)</h5>
+        <form action="watermark.php" method="post" enctype="multipart/form-data" class="mb-5">
+            <h2>Visible Watermarking (PHP)</h2>
+            <div class="form-group">
+                <label for="image">Select an image:</label>
+                <input type="file" name="image" class="form-control-file" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="watermarkText">Watermark Text:</label>
+                <input type="text" name="watermarkText" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Visible Watermark</button>
+        </form>
+
+        <hr>
+
+        <form action="http://127.0.0.1:5000/watermark" method="post" enctype="multipart/form-data">
+            <h2>Invisible Watermarking (Python)</h2>
+            <div class="form-group">
+                <label for="image">Select an image:</label>
+                <input type="file" name="image" class="form-control-file" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-secondary">Add Invisible Watermark</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
